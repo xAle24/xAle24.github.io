@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+	index.html
+
+	Homepage pubblica di Iride, richiesta da Google per pubblicare l'app
+	OAuth (Google Auth Platform → Branding). Pagina statica, senza risorse
+	esterne: si pubblica cosi' com'e' (per esempio con GitHub Pages).
+	Vedi iride/sito/README.md.
+-->
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>I.R.I.D.E.</title>
+	<meta name="description" content="Iride, assistente personale privato del progetto Ironman.">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23e8b64c' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23e8b64c'/%3E%3C/svg%3E">
+	<style>
+		:root {
+			--fondo: #060508;
+			--testo: #eae0ca;
+			--tenue: #8f8472;
+			--oro: #e8b64c;
+			--oro-chiaro: #ffe3a3;
+			--linea: rgb(232 182 76 / 0.25);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 32px 16px;
+			background:
+				radial-gradient(ellipse 60% 50% at 50% 40%, rgb(120 72 18 / 0.25), transparent 70%),
+				var(--fondo);
+			color: var(--testo);
+			font-family: Bahnschrift, "DIN Alternate", "Segoe UI", system-ui, sans-serif;
+			line-height: 1.6;
+		}
+
+		main {
+			width: 100%;
+			max-width: 620px;
+			text-align: center;
+		}
+
+		.occhio {
+			width: 96px;
+			height: 96px;
+			margin: 0 auto 24px;
+			filter: drop-shadow(0 0 18px rgb(232 182 76 / 0.45));
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 34px;
+			font-weight: 300;
+			letter-spacing: 0.4em;
+			padding-left: 0.4em;
+			color: var(--oro);
+		}
+
+		.motto {
+			margin: 6px 0 32px;
+			font-size: 14px;
+			font-style: italic;
+			letter-spacing: 0.06em;
+			color: var(--tenue);
+		}
+
+		p {
+			margin: 0 0 16px;
+			text-align: left;
+		}
+
+		.riquadro {
+			padding: 20px 22px 6px;
+			border: 1px solid var(--linea);
+			background: rgb(18 14 9 / 0.66);
+		}
+
+		a {
+			color: var(--oro-chiaro);
+		}
+
+		footer {
+			margin-top: 28px;
+			font-size: 13px;
+			color: var(--tenue);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<svg class="occhio" viewBox="0 0 100 100" aria-hidden="true">
+			<circle cx="50" cy="50" r="44" fill="none" stroke="#8a6424" stroke-width="1" stroke-dasharray="2 4"/>
+			<circle cx="50" cy="50" r="34" fill="none" stroke="#e8b64c" stroke-width="2"/>
+			<circle cx="50" cy="50" r="14" fill="#e8b64c"/>
+			<circle cx="45" cy="45" r="4" fill="#ffe3a3"/>
+		</svg>
+		<h1>I.R.I.D.E.</h1>
+		<p class="motto">It's Really Intelligent, Dreadfully Elegant</p>
+
+		<div class="riquadro">
+			<p>
+				Iride è un assistente personale privato, in stile J.A.R.V.I.S., che
+				fa parte di un progetto amatoriale di un'armatura stampata in 3D.
+				Gira sul PC del suo proprietario e lo aiuta con impegni, promemoria
+				e cose da fare.
+			</p>
+			<p>
+				Non è un servizio pubblico: ha un solo utente, il proprietario del
+				progetto, e non si può usare né scaricare da altri.
+			</p>
+			<p>
+				Per accedere al calendario e alle attività del proprietario, Iride
+				usa le API di Google con il suo consenso. Come vengono trattati
+				questi dati è scritto nell'<a href="privacy.html">informativa sulla
+				privacy</a>.
+			</p>
+		</div>
+
+		<footer>
+			<a href="privacy.html">Informativa sulla privacy</a>
+		</footer>
+	</main>
+</body>
+</html>

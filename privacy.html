@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+	privacy.html
+
+	Informativa sulla privacy di Iride, richiesta da Google per pubblicare
+	l'app OAuth. Deve dire la verita' su cosa fa Iride con i dati di Google:
+	se cambia cosa legge, scrive o a chi manda i dati, va aggiornata (e va
+	aggiornata la data in fondo). Vedi iride/sito/README.md.
+-->
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Iride — Informativa sulla privacy</title>
+	<meta name="description" content="Come Iride, assistente personale privato, tratta i dati di Google del suo unico utente.">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23e8b64c' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23e8b64c'/%3E%3C/svg%3E">
+	<style>
+		:root {
+			--fondo: #060508;
+			--testo: #eae0ca;
+			--tenue: #8f8472;
+			--oro: #e8b64c;
+			--oro-chiaro: #ffe3a3;
+			--linea: rgb(232 182 76 / 0.25);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 40px 16px;
+			background: var(--fondo);
+			color: var(--testo);
+			font-family: Bahnschrift, "DIN Alternate", "Segoe UI", system-ui, sans-serif;
+			line-height: 1.65;
+		}
+
+		main {
+			max-width: 720px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			margin: 0 0 4px;
+			font-size: 26px;
+			font-weight: 300;
+			letter-spacing: 0.12em;
+			color: var(--oro);
+		}
+
+		h2 {
+			margin: 32px 0 8px;
+			padding-bottom: 4px;
+			border-bottom: 1px solid var(--linea);
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: var(--oro);
+		}
+
+		.sottotitolo {
+			margin: 0 0 24px;
+			color: var(--tenue);
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 15px;
+		}
+
+		th,
+		td {
+			padding: 8px 10px;
+			border-bottom: 1px solid var(--linea);
+			text-align: left;
+			vertical-align: top;
+		}
+
+		th {
+			font-weight: 400;
+			color: var(--tenue);
+		}
+
+		code {
+			font-family: "Cascadia Mono", Consolas, monospace;
+			font-size: 13px;
+			color: var(--oro-chiaro);
+			overflow-wrap: anywhere;
+		}
+
+		a {
+			color: var(--oro-chiaro);
+		}
+
+		.scorre {
+			overflow-x: auto;
+		}
+
+		footer {
+			margin-top: 40px;
+			font-size: 14px;
+			color: var(--tenue);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Informativa sulla privacy</h1>
+		<p class="sottotitolo">Iride (I.R.I.D.E.), assistente personale privato · <a href="./">pagina principale</a></p>
+
+		<h2>Chi usa Iride</h2>
+		<p>
+			Iride è un assistente personale sviluppato e usato da una sola
+			persona, il proprietario del progetto, sul proprio PC. Non è un
+			servizio pubblico, non ha altri utenti e non raccoglie dati di
+			altre persone tramite Google.
+		</p>
+
+		<h2>A quali dati di Google accede</h2>
+		<p>Solo a quelli che il proprietario autorizza, con questi permessi:</p>
+		<div class="scorre">
+			<table>
+				<tr><th>Permesso</th><th>A cosa serve</th></tr>
+				<tr><td><code>calendar.events</code></td><td>Leggere gli impegni dei calendari e scrivere i promemoria</td></tr>
+				<tr><td><code>calendar.calendarlist.readonly</code></td><td>Sapere quali calendari ci sono</td></tr>
+				<tr><td><code>calendar.app.created</code></td><td>Creare il calendario "Iride", dove finiscono i promemoria</td></tr>
+				<tr><td><code>tasks</code></td><td>Leggere, aggiungere e spuntare le cose da fare (Google Tasks)</td></tr>
+				<tr><td><code>drive.file</code></td><td>Solo i file creati da Iride su Drive (il documento con le cose da ricordare); il resto del Drive non lo vede</td></tr>
+			</table>
+		</div>
+
+		<h2>Come li usa</h2>
+		<p>
+			Per mostrare impegni, promemoria e cose da fare nella dashboard
+			personale sul PC del proprietario, per rispondere alle sue domande
+			(per esempio "cosa ho domani?") e per ricordargli le cose all'ora
+			giusta. Iride scrive nel calendario, nelle attività e nei suoi file
+			su Drive solo quando il proprietario glielo chiede.
+		</p>
+
+		<h2>Dove restano</h2>
+		<p>
+			I dati letti da Google restano nella memoria del programma sul PC
+			del proprietario e non vengono copiati su disco: Google resta l'unico
+			archivio. Sul PC si salva solo l'autorizzazione di accesso (il
+			token), che non esce dal PC. Iride non ha server propri.
+		</p>
+
+		<h2>Con chi li condivide</h2>
+		<p>
+			I dati non vengono venduti, non servono a pubblicità e non vengono
+			ceduti a nessuno. L'unica eccezione è il modello linguistico che
+			Iride usa per capire le domande e scrivere le risposte (un servizio
+			esterno, come Groq o Anthropic, oppure un modello sul PC): quando il
+			proprietario chiede qualcosa che riguarda i suoi impegni o le sue
+			attività, il testo necessario viene mandato al modello solo per
+			preparare quella risposta. Iride non usa né cede i dati di Google per
+			addestrare modelli di intelligenza artificiale.
+		</p>
+		<p>
+			L'uso e il trasferimento ad altre app delle informazioni ricevute
+			dalle API di Google rispettano le
+			<a href="https://developers.google.com/terms/api-services-user-data-policy">Norme
+			sui dati utente dei servizi API di Google</a>, compresi i requisiti
+			di uso limitato (<i>Limited Use</i>).
+		</p>
+
+		<h2>Come si toglie l'accesso</h2>
+		<p>
+			Il proprietario può revocare l'accesso di Iride in qualsiasi
+			momento da
+			<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+			e cancellare l'autorizzazione salvata sul PC. Da quel momento Iride
+			non può più leggere né scrivere nulla.
+		</p>
+
+		<h2>In English</h2>
+		<p>
+			Iride is a private personal assistant used by a single person, its
+			owner, on their own computer. It accesses the owner's Google
+			Calendar, Google Tasks and only the Drive files it creates, to show
+			appointments, reminders and to-dos on a personal dashboard and to
+			answer the owner's questions. Data read from Google is kept in memory
+			on the owner's PC only; just the authorization token is stored there.
+			Data is never sold, used for advertising or shared, except for the
+			text needed to answer the owner's request, which may be sent to the
+			language model service Iride uses. Google data is not used to train
+			AI models. Iride's use and transfer of information received from
+			Google APIs adheres to the
+			<a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+			API Services User Data Policy</a>, including the Limited Use
+			requirements. Access can be revoked at any time at
+			<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+		</p>
+
+		<footer>Ultimo aggiornamento: 4 ottobre 2026</footer>
+	</main>
+</body>
+</html>
